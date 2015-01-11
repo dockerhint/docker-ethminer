@@ -1,7 +1,7 @@
 # docker-ethminer
-Automated Docker build of ethereum miner based on the cpp-ethereum build, and the [build instructions](https://github.com/ethereum/cpp-ethereum/wiki/Building-on-Ubuntu) on the official ethereum wiki for Ubuntu 14.04. 
+Automated Docker build of [ethereum](ethereum.org) miner based on the cpp-ethereum build, and the [build instructions](https://github.com/ethereum/cpp-ethereum/wiki/Building-on-Ubuntu) on the official ethereum wiki for Ubuntu 14.04. 
 
-The init.sh script by default will start a local eth serrver like so:
+The init.sh script by default will start a local eth server like so:
 
 <pre>./eth -o peer -x 256 -l 30303 -m off -v 1 </pre>
 
