@@ -16,4 +16,5 @@ RUN mkdir -p /usr/src
 WORKDIR /usr/src/
 RUN git clone https://github.com/ethereum/cpp-ethereum && cd cpp-ethereum && git checkout develop && mkdir build && cd build && cmake .. -DHEADLESS=1 && make -j4
 ADD init.sh /usr/src/init.sh
+EXPOSE 30303
 CMD /usr/src/init.sh
