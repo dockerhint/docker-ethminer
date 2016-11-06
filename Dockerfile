@@ -11,6 +11,11 @@ RUN apt-get update && \
 COPY docker-entrypoint.sh /
 RUN chmod 777 /docker-entrypoint.sh
 
+# Metadata params
+ARG BUILD_DATE
+ARG VERSION
+ARG VCS_URL
+ARG VCS_REF
 # Metadata
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="Ethminer" \
@@ -22,5 +27,5 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0" \
       com.microscaling.docker.dockerfile="/Dockerfile"
-      
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
