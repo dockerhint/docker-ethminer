@@ -6,7 +6,7 @@ RUN apt-get update && \
     add-apt-repository -y ppa:ethereum/ethereum && \
     add-apt-repository -y ppa:ethereum/ethereum-dev && \
     apt-get -y update && \
-    apt-get -y install ethminer
+    apt-get -y install ethminer libcurl4-openssl-dev libssl-dev
 
 COPY docker-entrypoint.sh /
 RUN chmod 777 /docker-entrypoint.sh
